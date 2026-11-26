@@ -1,0 +1,37 @@
+{
+  "name": "eruda-features",
+  "version": "2.1.0",
+  "main": "eruda-features.js",
+  "description": "Eruda plugin for browser feature detections",
+  "browserslist": [
+    "since 2015",
+    "not dead"
+  ],
+  "files": [
+    "eruda-features.js",
+    "eruda-features.js.map"
+  ],
+  "scripts": {
+    "dev": "webpack-dev-server --host 0.0.0.0 --mode development",
+    "build": "webpack --mode production",
+    "ci": "npm run lint && npm run build && npm run es5",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier \"src/**/*.{js,scss}\" \"script/**/*.js\" \"*.json\" --write",
+    "buildModernizr": "node script/buildModernizr",
+    "es5": "es-check es5 eruda-features.js"
+  },
+  "keywords": [
+    "eruda",
+    "features",
+    "plugin"
+  ],
+  "author": "redhoodsu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liriliri/eruda-features/issues"
+  },
+  "homepage": "https://github.com/liriliri/eruda-features#readme",
+  "devDependencies": {
+    "modernizr": "^3.13.0"
+  }
+}

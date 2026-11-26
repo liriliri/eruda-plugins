@@ -1,0 +1,31 @@
+{
+  "name": "eruda-monitor",
+  "version": "1.1.2",
+  "main": "eruda-monitor.js",
+  "description": "Eruda plugin for fps and memory",
+  "browserslist": [
+    "since 2015",
+    "not dead"
+  ],
+  "files": [
+    "eruda-monitor.js",
+    "eruda-monitor.js.map"
+  ],
+  "scripts": {
+    "dev": "webpack-dev-server --host 0.0.0.0 --mode development",
+    "build": "webpack --mode production",
+    "ci": "npm run lint && npm run build && npm run es5",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier \"src/**/*.{js,scss}\" \"*.json\" --write",
+    "es5": "es-check es5 eruda-monitor.js"
+  },
+  "keywords": [
+    "eruda",
+    "plugin"
+  ],
+  "author": "surunzi",
+  "license": "MIT",
+  "devDependencies": {
+    "luna-performance-monitor": "^1.2.2"
+  }
+}

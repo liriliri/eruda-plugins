@@ -1,0 +1,43 @@
+name: Publish to NPM
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: 'Plugin to publish'
+        type: choice
+        options:
+          - features
+          - monitor
+        default: features
+        required: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm install
+      - name: Build
+        env:
+          PACKAGE: ${{ inputs.package }}
+        run: npm run build --workspace="packages/$PACKAGE"
+      - name: Publish to NPM
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          PACKAGE: ${{ inputs.package }}
+        run: |
+          case "$PACKAGE" in
+            features|monitor) ;;
+            *)
+              echo "Unknown package: '$PACKAGE'" >&2
+              exit 1
+              ;;
+          esac
+          npm publish --workspace="packages/$PACKAGE"

@@ -1,0 +1,12 @@
+.monitor {
+  padding: 10px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  .memory,
+  .dom-nodes {
+    margin: 10px 0;
+  }
+  .luna-performance-monitor {
+    border-color: var(--border) !important;
+  }
+}

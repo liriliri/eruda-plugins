@@ -1,0 +1,10 @@
+node_modules/
+package-lock.json
+*.log
+.DS_Store
+
+# build artifacts
+packages/features/eruda-features.js
+packages/features/eruda-features.js.map
+packages/monitor/eruda-monitor.js
+packages/monitor/eruda-monitor.js.map

@@ -1,0 +1,47 @@
+@mixin overflow-auto($direction: 'both') {
+  @if $direction == 'both' {
+    overflow: auto;
+  } @else {
+    overflow-#{$direction}: auto;
+  }
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin clear-float {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+$font-size-s: 12px;
+
+.features {
+  ul {
+    height: 100%;
+    @include overflow-auto(y);
+    @include clear-float();
+    li {
+      width: 33.3%;
+      float: left;
+      padding: 5px;
+      .inner-wrapper {
+        @include overflow-auto(x);
+        font-size: $font-size-s;
+        text-decoration: underline;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        color: var(--console-error-foreground);
+        background: var(--console-error-background);
+        border: 1px solid var(--console-error-border);
+        &.ok {
+          background: var(--darker-background);
+          border: 1px solid var(--border);
+          color: var(--foreground);
+        }
+      }
+    }
+  }
+}
