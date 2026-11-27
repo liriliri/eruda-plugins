@@ -14,3 +14,9 @@ packages/geolocation/eruda-geolocation.js
 packages/geolocation/eruda-geolocation.js.map
 packages/timing/eruda-timing.js
 packages/timing/eruda-timing.js.map
+packages/code/eruda-code.js
+packages/code/eruda-code.js.map
+packages/orientation/eruda-orientation.js
+packages/orientation/eruda-orientation.js.map
+packages/touches/eruda-touches.js
+packages/touches/eruda-touches.js.map

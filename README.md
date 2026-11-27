@@ -12,6 +12,9 @@ npm workspace.
 | [`eruda-benchmark`](./packages/benchmark) | JavaScript benchmarking | 2.0.1 |
 | [`eruda-geolocation`](./packages/geolocation) | Testing geolocation | 2.1.0 |
 | [`eruda-timing`](./packages/timing) | Performance and resource timing | 2.0.1 |
+| [`eruda-code`](./packages/code) | Running JavaScript code | 2.2.0 |
+| [`eruda-orientation`](./packages/orientation) | Testing orientation api | 2.1.1 |
+| [`eruda-touches`](./packages/touches) | Visualizing screen touches | 2.1.0 |
 
 ## Layout
 
@@ -22,7 +25,10 @@ eruda-plugins/
 │   ├── monitor/              # published as `eruda-monitor`
 │   ├── benchmark/            # published as `eruda-benchmark`
 │   ├── geolocation/          # published as `eruda-geolocation`
-│   └── timing/               # published as `eruda-timing`
+│   ├── timing/               # published as `eruda-timing`
+│   ├── code/                 # published as `eruda-code`
+│   ├── orientation/          # published as `eruda-orientation`
+│   └── touches/              # published as `eruda-touches`
 ├── package.json            # workspace root, private
 └── .github/workflows/       # CI and publish pipelines
 ```
@@ -66,8 +72,9 @@ npm run dev --workspace=packages/monitor      # dev server on http://localhost:8
 ```
 
 `npm run dev:features`, `npm run dev:monitor`, `npm run dev:benchmark`,
-`npm run dev:geolocation` and `npm run dev:timing` are shortcuts for the dev
-servers (ports 8080, 8081, 8082, 8083 and 8084 respectively).
+`npm run dev:geolocation`, `npm run dev:timing`, `npm run dev:code`,
+`npm run dev:orientation` and `npm run dev:touches` are shortcuts for the dev
+servers (ports 8080, 8081, 8082, 8083, 8084, 8085, 8086 and 8087 respectively).
 
 ## Publishing
 
@@ -75,7 +82,9 @@ Build artifacts are written to the package root
 (`packages/features/eruda-features.js`, `packages/monitor/eruda-monitor.js`,
 `packages/benchmark/eruda-benchmark.js`,
 `packages/geolocation/eruda-geolocation.js`,
-`packages/timing/eruda-timing.js`) and are git-ignored.
+`packages/timing/eruda-timing.js`, `packages/code/eruda-code.js`,
+`packages/orientation/eruda-orientation.js`,
+`packages/touches/eruda-touches.js`) and are git-ignored.
 
 Publishing is a manual action: dispatch the `Publish to NPM` workflow and pick the
 plugin to publish with the `package` input.
@@ -87,6 +96,9 @@ plugin to publish with the `package` input.
 | `benchmark` | `eruda-benchmark` |
 | `geolocation` | `eruda-geolocation` |
 | `timing` | `eruda-timing` |
+| `code` | `eruda-code` |
+| `orientation` | `eruda-orientation` |
+| `touches` | `eruda-touches` |
 
 Only the selected plugin is built and published. The `NPM_TOKEN` secret is required.
 

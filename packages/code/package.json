@@ -1,0 +1,41 @@
+{
+  "name": "eruda-code",
+  "version": "2.2.0",
+  "description": "Eruda plugin for running JavaScript code",
+  "main": "eruda-code.js",
+  "browserslist": [
+    "since 2015",
+    "not dead"
+  ],
+  "files": [
+    "eruda-code.js",
+    "eruda-code.js.map"
+  ],
+  "scripts": {
+    "dev": "webpack-dev-server --host 0.0.0.0 --mode development",
+    "build": "webpack --mode production",
+    "ci": "npm run lint && npm run build && npm run es5",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier \"src/**/*.{js,scss,css}\" \"*.json\" --write",
+    "es5": "es-check es5 eruda-code.js"
+  },
+  "keywords": [
+    "eruda",
+    "plugin"
+  ],
+  "author": "surunzi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liriliri/eruda-plugins.git",
+    "directory": "packages/code"
+  },
+  "bugs": {
+    "url": "https://github.com/liriliri/eruda-plugins/issues"
+  },
+  "homepage": "https://github.com/liriliri/eruda-plugins/tree/master/packages/code",
+  "devDependencies": {
+    "codemirror": "^5.65.17",
+    "js-beautify": "^1.14.7"
+  }
+}

@@ -1,0 +1,46 @@
+.CodeMirror {
+  height: 100%;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.CodeMirror-cursor {
+  border-left: 1px solid var(--light);
+  border-right: 1px solid var(--dark);
+}
+
+.CodeMirror-gutters {
+  background: var(--background);
+  border-color: var(--border);
+}
+
+/* Sync style with chrome dev-tool */
+.cm-s-default .cm-keyword {
+  color: var(--keyword-color);
+}
+.cm-s-default .cm-number {
+  color: var(--number-color);
+}
+.cm-s-default .cm-comment {
+  color: var(--comment-color) !important;
+  font-style: italic;
+}
+.cm-s-default .cm-string,
+.cm-s-default .com-string-2 {
+  color: var(--string-color);
+}
+.cm-atom {
+  color: var(--attribute-name-color);
+}
+.cm-s-default .cm-def {
+  color: var(--foreground);
+}
+.cm-operator {
+  color: var(--operator-color);
+}
+.cm-s-default .cm-meta {
+  color: var(--tag-name-color);
+}
+.cm-s-default .cm-variable-2 {
+  color: var(--var-color);
+}

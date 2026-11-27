@@ -1,0 +1,37 @@
+{
+  "name": "eruda-touches",
+  "version": "2.1.0",
+  "main": "eruda-touches.js",
+  "description": "Eruda plugin for visualizing screen touches",
+  "browserslist": [
+    "since 2015",
+    "not dead"
+  ],
+  "files": [
+    "eruda-touches.js",
+    "eruda-touches.js.map"
+  ],
+  "scripts": {
+    "dev": "webpack-dev-server --host 0.0.0.0 --mode development",
+    "build": "webpack --mode production",
+    "ci": "npm run lint && npm run build && npm run es5",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier \"src/**/*.{js,scss}\" \"*.json\" --write",
+    "es5": "es-check es5 eruda-touches.js"
+  },
+  "keywords": [
+    "eruda",
+    "plugin"
+  ],
+  "author": "surunzi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liriliri/eruda-plugins.git",
+    "directory": "packages/touches"
+  },
+  "bugs": {
+    "url": "https://github.com/liriliri/eruda-plugins/issues"
+  },
+  "homepage": "https://github.com/liriliri/eruda-plugins/tree/master/packages/touches"
+}

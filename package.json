@@ -15,7 +15,10 @@
     "dev:monitor": "npm run dev --workspace=eruda-monitor",
     "dev:benchmark": "npm run dev --workspace=eruda-benchmark",
     "dev:geolocation": "npm run dev --workspace=eruda-geolocation",
-    "dev:timing": "npm run dev --workspace=eruda-timing"
+    "dev:timing": "npm run dev --workspace=eruda-timing",
+    "dev:code": "npm run dev --workspace=eruda-code",
+    "dev:orientation": "npm run dev --workspace=eruda-orientation",
+    "dev:touches": "npm run dev --workspace=eruda-touches"
   },
   "keywords": [
     "eruda",

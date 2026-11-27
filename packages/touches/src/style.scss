@@ -1,0 +1,10 @@
+.touches {
+  padding: 10px;
+  canvas {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    background: var(--darker-background);
+    margin: 0 auto;
+  }
+}

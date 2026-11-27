@@ -12,6 +12,9 @@ on:
           - benchmark
           - geolocation
           - timing
+          - code
+          - orientation
+          - touches
         default: features
         required: true
 
@@ -37,7 +40,7 @@ jobs:
           PACKAGE: ${{ inputs.package }}
         run: |
           case "$PACKAGE" in
-            features|monitor|benchmark|geolocation|timing) ;;
+            features|monitor|benchmark|geolocation|timing|code|orientation|touches) ;;
             *)
               echo "Unknown package: '$PACKAGE'" >&2
               exit 1

@@ -1,7 +1,3 @@
-## Unreleased
-
-* refactor: move into the eruda-plugins monorepo
-
 ## v2.0.1 (2 Apr 2023)
 
 * fix: do not use eruda util
