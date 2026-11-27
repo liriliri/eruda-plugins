@@ -1,0 +1,120 @@
+@mixin overflow-auto($direction: 'both') {
+  @if $direction == 'both' {
+    overflow: auto;
+  } @else {
+    overflow-#{$direction}: auto;
+  }
+  -webkit-overflow-scrolling: touch;
+}
+
+$padding: 10px;
+$font-size-s: 12px;
+$font-size-l: 16px;
+$font-size: 14px;
+$anim-duration: 0.3s;
+
+.timing {
+  @include overflow-auto(y);
+  .performance-timing {
+    padding: $padding 0;
+    .inner-wrapper {
+      background: var(--darker-background);
+      .bar {
+        @include overflow-auto(x);
+        border-bottom: 1px solid var(--border);
+        span {
+          font-size: $font-size-s;
+          white-space: nowrap;
+          padding: 5px 0;
+          background: var(--highlight);
+          display: inline-block;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .performance-timing-data {
+    padding-bottom: $padding;
+    text-align: center;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      th {
+        background: var(--darker-background);
+        text-align: left;
+        font-size: $font-size;
+      }
+      td {
+        font-size: $font-size-s;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid var(--border);
+      }
+      tr:nth-child(even) {
+        background: var(--contrast);
+      }
+    }
+  }
+  .title {
+    border-top: 1px solid var(--border);
+    background: var(--darker-background);
+    padding: $padding;
+    .btn {
+      display: flex;
+      margin-left: 5px;
+      float: right;
+      width: 18px;
+      height: 18px;
+      justify-content: center;
+      align-items: center;
+      font-size: $font-size-l;
+      cursor: pointer;
+      transition: color $anim-duration;
+      &:active {
+        color: var(--select-foreground);
+      }
+    }
+  }
+  .entries {
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 10px;
+    @include overflow-auto(x);
+    table {
+      min-width: 100%;
+      cursor: pointer;
+      tr:nth-child(4n-1) {
+        background: var(--contrast);
+      }
+      td.timeline {
+        padding: 0;
+        height: 4px;
+        font-size: 0;
+        span {
+          display: inline-block;
+          height: 100%;
+        }
+      }
+      td {
+        border: 1px solid var(--border);
+        padding: 10px;
+        white-space: nowrap;
+      }
+      .right {
+        text-align: right;
+      }
+    }
+  }
+  .not-supported {
+    background: var(--console-error-background);
+    border: 1px solid var(--console-error-border);
+    color: var(--console-error-foreground);
+    margin: 10px;
+    padding: $padding;
+    text-align: center;
+  }
+}

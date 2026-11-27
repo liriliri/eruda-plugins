@@ -25,6 +25,15 @@
   ],
   "author": "surunzi",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liriliri/eruda-plugins.git",
+    "directory": "packages/monitor"
+  },
+  "bugs": {
+    "url": "https://github.com/liriliri/eruda-plugins/issues"
+  },
+  "homepage": "https://github.com/liriliri/eruda-plugins/tree/master/packages/monitor",
   "devDependencies": {
     "luna-performance-monitor": "^1.2.2"
   }

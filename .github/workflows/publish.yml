@@ -9,6 +9,9 @@ on:
         options:
           - features
           - monitor
+          - benchmark
+          - geolocation
+          - timing
         default: features
         required: true
 
@@ -34,7 +37,7 @@ jobs:
           PACKAGE: ${{ inputs.package }}
         run: |
           case "$PACKAGE" in
-            features|monitor) ;;
+            features|monitor|benchmark|geolocation|timing) ;;
             *)
               echo "Unknown package: '$PACKAGE'" >&2
               exit 1

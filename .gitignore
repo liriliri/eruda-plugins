@@ -8,3 +8,9 @@ packages/features/eruda-features.js
 packages/features/eruda-features.js.map
 packages/monitor/eruda-monitor.js
 packages/monitor/eruda-monitor.js.map
+packages/benchmark/eruda-benchmark.js
+packages/benchmark/eruda-benchmark.js.map
+packages/geolocation/eruda-geolocation.js
+packages/geolocation/eruda-geolocation.js.map
+packages/timing/eruda-timing.js
+packages/timing/eruda-timing.js.map

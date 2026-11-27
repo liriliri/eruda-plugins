@@ -27,10 +27,15 @@
   ],
   "author": "redhoodsu",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/liriliri/eruda-features/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liriliri/eruda-plugins.git",
+    "directory": "packages/features"
   },
-  "homepage": "https://github.com/liriliri/eruda-features#readme",
+  "bugs": {
+    "url": "https://github.com/liriliri/eruda-plugins/issues"
+  },
+  "homepage": "https://github.com/liriliri/eruda-plugins/tree/master/packages/features",
   "devDependencies": {
     "modernizr": "^3.13.0"
   }

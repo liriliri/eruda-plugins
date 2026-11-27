@@ -6,8 +6,8 @@
 
 [npm-image]: https://img.shields.io/npm/v/eruda-monitor.svg
 [npm-url]: https://npmjs.org/package/eruda-monitor
-[ci-image]: https://img.shields.io/github/actions/workflow/status/liriliri/eruda-monitor/main.yml?branch=master&style=flat-square
-[ci-url]: https://github.com/liriliri/eruda-monitor/actions/workflows/main.yml 
+[ci-image]: https://github.com/liriliri/eruda-plugins/actions/workflow/status/main.yml?branch=master&style=flat-square
+[ci-url]: https://github.com/liriliri/eruda-plugins/actions/workflows/main.yml
 [license-image]: https://img.shields.io/npm/l/eruda-monitor.svg
 
 Eruda plugin for monitoring fps, memory and dom nodes.

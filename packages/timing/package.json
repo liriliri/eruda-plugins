@@ -1,0 +1,42 @@
+{
+  "name": "eruda-timing",
+  "version": "2.0.1",
+  "main": "eruda-timing.js",
+  "description": "Eruda plugin for performance and resource timing",
+  "browserslist": [
+    "since 2015",
+    "not dead"
+  ],
+  "files": [
+    "eruda-timing.js",
+    "eruda-timing.js.map"
+  ],
+  "scripts": {
+    "dev": "webpack-dev-server --host 0.0.0.0 --mode development",
+    "build": "webpack --mode production",
+    "ci": "npm run lint && npm run build && npm run es5",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier \"src/**/*.{js,scss}\" \"*.json\" --write",
+    "es5": "es-check es5 eruda-timing.js"
+  },
+  "keywords": [
+    "eruda",
+    "plugin",
+    "timing"
+  ],
+  "author": "redhoodsu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liriliri/eruda-plugins.git",
+    "directory": "packages/timing"
+  },
+  "bugs": {
+    "url": "https://github.com/liriliri/eruda-plugins/issues"
+  },
+  "homepage": "https://github.com/liriliri/eruda-plugins/tree/master/packages/timing",
+  "devDependencies": {
+    "handlebars": "^4.7.8",
+    "handlebars-loader": "^1.7.3"
+  }
+}

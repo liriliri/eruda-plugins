@@ -6,8 +6,8 @@
 
 [npm-image]: https://img.shields.io/npm/v/eruda-features.svg
 [npm-url]: https://npmjs.org/package/eruda-features
-[ci-image]: https://img.shields.io/github/actions/workflow/status/liriliri/eruda-features/main.yml?branch=master&style=flat-square
-[ci-url]: https://github.com/liriliri/eruda-features/actions/workflows/main.yml 
+[ci-image]: https://github.com/liriliri/eruda-plugins/actions/workflow/status/main.yml?branch=master&style=flat-square
+[ci-url]: https://github.com/liriliri/eruda-plugins/actions/workflows/main.yml
 [license-image]: https://img.shields.io/npm/l/eruda-features.svg
 
 Eruda plugin for browser feature detections, thanks to [modernizr](https://github.com/Modernizr/Modernizr) project.

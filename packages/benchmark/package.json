@@ -1,0 +1,43 @@
+{
+  "name": "eruda-benchmark",
+  "version": "2.0.1",
+  "description": "Eruda plugin for running JavaScript benchmarks",
+  "main": "eruda-benchmark.js",
+  "browserslist": [
+    "since 2015",
+    "not dead"
+  ],
+  "files": [
+    "eruda-benchmark.js",
+    "eruda-benchmark.js.map"
+  ],
+  "scripts": {
+    "dev": "webpack-dev-server --host 0.0.0.0 --mode development",
+    "build": "webpack --mode production",
+    "ci": "npm run lint && npm run build && npm run es5",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier \"src/**/*.{js,scss}\" \"*.json\" --write",
+    "es5": "es-check es5 eruda-benchmark.js"
+  },
+  "keywords": [
+    "eruda",
+    "plugin",
+    "benchmark"
+  ],
+  "author": "redhoodsu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liriliri/eruda-plugins.git",
+    "directory": "packages/benchmark"
+  },
+  "bugs": {
+    "url": "https://github.com/liriliri/eruda-plugins/issues"
+  },
+  "homepage": "https://github.com/liriliri/eruda-plugins/tree/master/packages/benchmark",
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "lodash": "^4.17.21",
+    "process": "^0.11.10"
+  }
+}

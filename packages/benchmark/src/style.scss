@@ -1,0 +1,68 @@
+@mixin overflow-auto($direction: 'both') {
+  @if $direction == 'both' {
+    overflow: auto;
+  } @else {
+    overflow-#{$direction}: auto;
+  }
+  -webkit-overflow-scrolling: touch;
+}
+
+.benchmark {
+  padding: 10px;
+  @include overflow-auto(y);
+  li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+    .title {
+      font-size: 16px;
+      color: var(--accent);
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .title,
+    .result,
+    .btn {
+      margin: 10px;
+    }
+    .result-item {
+      margin: 10px 0;
+    }
+    .result-item-name {
+      display: inline-block;
+      color: var(--accent);
+    }
+    .result-number {
+      display: inline;
+      color: var(--accent);
+    }
+    .status {
+      background: var(--darker-background);
+      color: var(--foreground);
+      position: absolute;
+      right: 0;
+      padding: 2px;
+      font-size: 12px;
+    }
+    .btn {
+      background: var(--darker-background);
+      cursor: pointer;
+      transition: background-color 0.3s;
+      color: var(--foreground);
+      padding: 10px;
+      text-align: center;
+      &:active {
+        color: var(--select-foreground);
+        background: var(--highlight);
+      }
+      &.disabled {
+        cursor: default;
+        background: var(--highlight);
+        &:active {
+          background: var(--highlight);
+        }
+      }
+    }
+  }
+}

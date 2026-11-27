@@ -12,7 +12,10 @@
     "format": "npm run format --workspaces --if-present",
     "ci": "npm run ci --workspaces --if-present",
     "dev:features": "npm run dev --workspace=eruda-features",
-    "dev:monitor": "npm run dev --workspace=eruda-monitor"
+    "dev:monitor": "npm run dev --workspace=eruda-monitor",
+    "dev:benchmark": "npm run dev --workspace=eruda-benchmark",
+    "dev:geolocation": "npm run dev --workspace=eruda-geolocation",
+    "dev:timing": "npm run dev --workspace=eruda-timing"
   },
   "keywords": [
     "eruda",
@@ -21,6 +24,14 @@
   ],
   "author": "surunzi",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liriliri/eruda-plugins.git"
+  },
+  "bugs": {
+    "url": "https://github.com/liriliri/eruda-plugins/issues"
+  },
+  "homepage": "https://github.com/liriliri/eruda-plugins#readme",
   "devDependencies": {
     "@babel/core": "^7.21.3",
     "@babel/plugin-transform-runtime": "^7.21.0",
