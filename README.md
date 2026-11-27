@@ -15,6 +15,7 @@ npm workspace.
 | [`eruda-code`](./packages/code) | Running JavaScript code | 2.2.0 |
 | [`eruda-orientation`](./packages/orientation) | Testing orientation api | 2.1.1 |
 | [`eruda-touches`](./packages/touches) | Visualizing screen touches | 2.1.0 |
+| [`eruda-plugin`](./packages/plugin) | CLI scaffolding an eruda plugin project | 1.4.0 |
 
 ## Layout
 
@@ -28,13 +29,17 @@ eruda-plugins/
 │   ├── timing/               # published as `eruda-timing`
 │   ├── code/                 # published as `eruda-code`
 │   ├── orientation/          # published as `eruda-orientation`
-│   └── touches/              # published as `eruda-touches`
+│   ├── touches/              # published as `eruda-touches`
+│   └── plugin/               # published as `eruda-plugin`
 ├── package.json            # workspace root, private
 └── .github/workflows/       # CI and publish pipelines
 ```
 
 Each plugin keeps its own `package.json`, webpack config, README, CHANGELOG and
 LICENSE, and is published to npm under its own name.
+
+`eruda-plugin` is not a plugin but the CLI that scaffolds a new plugin project
+from one of the bundled `simple` / `webpack` templates.
 
 ## Usage
 
@@ -76,6 +81,12 @@ npm run dev --workspace=packages/monitor      # dev server on http://localhost:8
 `npm run dev:orientation` and `npm run dev:touches` are shortcuts for the dev
 servers (ports 8080, 8081, 8082, 8083, 8084, 8085, 8086 and 8087 respectively).
 
+`eruda-plugin` ships no dev server, it is a command line tool:
+
+```bash
+npx eruda-plugin
+```
+
 ## Publishing
 
 Build artifacts are written to the package root
@@ -99,8 +110,10 @@ plugin to publish with the `package` input.
 | `code` | `eruda-code` |
 | `orientation` | `eruda-orientation` |
 | `touches` | `eruda-touches` |
+| `plugin` | `eruda-plugin` |
 
-Only the selected plugin is built and published. The `NPM_TOKEN` secret is required.
+Only the selected plugin is built and published. `eruda-plugin` has no build
+step, so the build step is skipped for it. The `NPM_TOKEN` secret is required.
 
 ## License
 

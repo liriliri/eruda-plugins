@@ -1,0 +1,46 @@
+{
+  "name": "eruda-plugin",
+  "version": "1.4.0",
+  "description": "Eruda plugin template",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "webpack",
+    "simple",
+    "bin"
+  ],
+  "scripts": {
+    "lint": "eslint index.js bin/*.js simple/eruda-plugin.js webpack/src/index.js webpack/webpack.config.js",
+    "es5": "es-check es5 simple/eruda-plugin.js",
+    "ci": "npm run lint && npm run es5",
+    "format": "prettier \"index.js\" \"bin/*.js\" \"*.json\" \"simple/*.{js,json}\" \"webpack/**/*.{js,json}\" --write"
+  },
+  "bin": {
+    "eruda-plugin": "./bin/eruda-plugin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liriliri/eruda-plugins.git",
+    "directory": "packages/plugin"
+  },
+  "keywords": [
+    "eruda",
+    "plugin",
+    "template"
+  ],
+  "author": "redhoodsu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liriliri/eruda-plugins/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://github.com/liriliri/eruda-plugins/tree/master/packages/plugin",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "glob": "^10.4.5",
+    "inquirer": "^10.0.2",
+    "licia": "^1.41.0"
+  }
+}

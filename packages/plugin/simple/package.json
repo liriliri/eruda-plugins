@@ -1,0 +1,37 @@
+{
+  "name": "eruda-plugin",
+  "version": "1.0.0",
+  "description": "Eruda plugin",
+  "main": "eruda-plugin.js",
+  "browserslist": [
+    "since 2015",
+    "not dead"
+  ],
+  "files": [
+    "eruda-plugin.js",
+    "eruda-plugin.min.js"
+  ],
+  "scripts": {
+    "build": "uglifyjs eruda-plugin.js -o eruda-plugin.min.js --mangle",
+    "lint": "eslint eruda-plugin.js",
+    "ci": "npm run lint && npm run build && npm run es5",
+    "format": "prettier \"*.{js,json}\" --write",
+    "es5": "es-check es5 eruda-plugin.js",
+    "dev": "http-server"
+  },
+  "keywords": [
+    "eruda",
+    "plugin"
+  ],
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://npmjs.org/package/eruda-plugin",
+  "devDependencies": {
+    "eruda": "^3.2.0",
+    "eslint": "^8.57.0",
+    "es-check": "^7.2.1",
+    "http-server": "^14.1.1",
+    "prettier": "^3.3.3",
+    "uglify-js": "^3.19.3"
+  }
+}

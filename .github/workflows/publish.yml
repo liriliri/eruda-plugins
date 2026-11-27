@@ -15,6 +15,7 @@ on:
           - code
           - orientation
           - touches
+          - plugin
         default: features
         required: true
 
@@ -33,14 +34,14 @@ jobs:
       - name: Build
         env:
           PACKAGE: ${{ inputs.package }}
-        run: npm run build --workspace="packages/$PACKAGE"
+        run: npm run build --workspace="packages/$PACKAGE" --if-present
       - name: Publish to NPM
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           PACKAGE: ${{ inputs.package }}
         run: |
           case "$PACKAGE" in
-            features|monitor|benchmark|geolocation|timing|code|orientation|touches) ;;
+            features|monitor|benchmark|geolocation|timing|code|orientation|touches|plugin) ;;
             *)
               echo "Unknown package: '$PACKAGE'" >&2
               exit 1

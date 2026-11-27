@@ -20,3 +20,6 @@ packages/orientation/eruda-orientation.js
 packages/orientation/eruda-orientation.js.map
 packages/touches/eruda-touches.js
 packages/touches/eruda-touches.js.map
+
+# scaffolded plugin playground
+packages/plugin/eruda-test/
